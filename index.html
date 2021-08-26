@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="node_modules/bootstrap/dist/css/bootstrap.css"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Gratitude Journal</title>
+	</head>
+
+	<body class="container">
+		<div class="card mt-4">
+			<div class="card-body">
+				<h1 class="text-center mb-3">
+					GRATITUDE
+					<span class="font-2">Journal</span>
+				</h1>
+
+				<!--date-->
+				<div class="row">
+					<div class="col-sm">
+						<div class="form-control pb-3">
+							<label class="ms-1" for="new-date">Date</label>
+							<input type="date" class="form-control" id="date" />
+						</div>
+					</div>
+				</div>
+
+				<br />
+				<!--category-->
+				<div class="row">
+					<div class="col-sm">
+						<div class="input-group form-control p-2">
+							<select class="form-select" id="category">
+								<option selected>select category</option>
+								<option>Community</option>
+								<option>Faith</option>
+								<option>Family</option>
+								<option>Friends</option>
+								<option>Growth</option>
+								<option>Health</option>
+								<option>Love</option>
+								<option>School</option>
+								<option>Work</option>
+							</select>
+							<label class="input-group-text" for="category">
+								Options
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<br />
+
+				<!--journal-entry-->
+				<div class="row">
+					<div class="col-sm">
+						<div class="form-control pb-3">
+							<label class="ms-1" for="journal-entry">
+								Entry
+							</label>
+							<input
+								type="text"
+								class="form-control"
+								id="journal-entry"
+								placeholder="express your gratitude..."
+							/>
+						</div>
+					</div>
+				</div>
+
+				<br />
+
+				<!--create-->
+				<div>
+					<button id="create" class="btn btn-primary">
+						Create Entry
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<br />
+
+		<!--entry-log-->
+		<table
+			class="table table-secondary table-striped text-center"
+			id="entry-log"
+		>
+			<tr>
+				<th>Date</th>
+				<th>Category</th>
+				<th>Entry</th>
+				<th>Actions</th>
+			</tr>
+		</table>
+
+		<script src="index.js"></script>
+		<script src="node_modules/jquery/dist/jquery.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	</body>
+</html>
